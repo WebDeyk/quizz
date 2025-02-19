@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+        }
+
+        body {
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background: #1f242d;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .login {
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 20px;
+            width: 500px;
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: white;
+            font-weight: 900;
+            margin: 20px 0px;
+        }
+
+        p {
+            color: white;
+            text-decoration: italic;
+        }
+
+        button {
+            height: 50px;
+            padding: 10px;
+            border: none;
+            border-radius: 100px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        button:hover {
+            color: white;
+            background: transparent;
+            transition: .3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SIMPLE QUIZ</h1>
+        <div class="login">
+            <p>QUIZ</p>
+            <button onclick="deyk()">START</button>
+        </div>
+    </div>
+    <script>
+        function deyk() {
+            let score = 0;
+            a = prompt('What is the largest existing animal in the world?');
+            b = a.toLowerCase() == 'blue whale';
+            score += b;
+
+            c = prompt('What is my favorite nickname?');
+            d = c.toLowerCase() == 'deyk';
+            score += d;
+
+            e = prompt('What is 4 + 78?');
+            f = e.toLowerCase() == '82';
+            score += f;
+
+            e = prompt('Pangalan ni kuwas?');
+            f = e.toLowerCase() == 'allysa mae';
+            score += f;
+
+            g = prompt('My age?');
+            h = g.toLowerCase() == '18';
+            score += h;
+
+            if (score == 5) {
+                location.href = 'congrats.html';
+            }
+            
+            alert(`Your total score is ${score} out of 5.`);
+        }
+    </script>
+</body>
+</html>
